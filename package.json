@@ -1,15 +1,25 @@
 {
-  "name": "final-devops",
+  "name": "school-erp-platform",
   "version": "1.0.0",
-  "description": "Simple DevOps CI/CD backend project using Node.js, Jenkins",
+  "description": "School ERP Platform - Complete Student, Teacher, and Class Management System",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "node app.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/Vipvishnu12/Demo-jenkins.git"
   },
+  "keywords": [
+    "school",
+    "erp",
+    "management",
+    "students",
+    "teachers",
+    "attendance",
+    "grades"
+  ],
   "author": "Vishnu",
   "license": "ISC",
   "dependencies": {

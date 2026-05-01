@@ -2,11 +2,22 @@ FROM node:18-alpine
 
 WORKDIR /app
 
+# Copy package files
 COPY package*.json ./
-RUN npm ci   # faster & clean install
 
+# Install dependencies
+RUN npm ci
+
+# Copy application and public files
 COPY . .
 
+# Create public directory if it doesn't exist
+RUN mkdir -p public
+
 EXPOSE 3000
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD node -e "require('http').get('http://localhost:3000', (r) => {if (r.statusCode !== 200) throw new Error(r.statusCode)})"
 
 CMD ["node", "app.js"]
