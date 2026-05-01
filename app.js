@@ -24,7 +24,7 @@ let database = {
         { id: 2, studentId: 2, date: '2024-05-01', status: 'Present', classId: 2 }
     ],
     grades: [
-        { id: 1, studentId: 1, subject: 'Mathematics', marks: 85, grade: 'A', term: 'Term 1' },
+        { id: 1, studentId: 1, subject: 'Mathemaffftics', marks: 85, grade: 'A', term: 'Term 1' },
         { id: 2, studentId: 2, subject: 'English', marks: 90, grade: 'A+', term: 'Term 1' }
     ]
 };
