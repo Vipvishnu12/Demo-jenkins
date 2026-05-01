@@ -3,15 +3,21 @@ pipeline {
 
     stages {
 
-        stage('Install Dependencies') {
+        stage('Build Docker Image') {
             steps {
-                bat 'npm install'
+                bat 'docker build -t demo-app .'
             }
         }
 
-        stage('Run App') {
+        stage('Stop Old Container') {
             steps {
-                bat 'start /B node app.js'
+                bat 'docker rm -f demo-container || true'
+            }
+        }
+
+        stage('Run Container') {
+            steps {
+                bat 'docker run -d -p 3000:3000 --name demo-container demo-app'
             }
         }
     }
