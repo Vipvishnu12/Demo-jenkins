@@ -6,6 +6,6 @@ app.get('/', (req, res) => {
 });
 
 app.listen(3000, () => {
-    console.log("Server running onijuiguiguig port 3000");
+    console.log("Serverrerere running onijuiguiguig port 3000");
 });
  
