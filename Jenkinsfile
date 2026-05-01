@@ -5,7 +5,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                bat 'wsl docker build -t demo-app .'
+                bat 'wsl cd /mnt/c/ProgramData/Jenkins/.jenkins/workspace/demoforpipeline && docker build -t demo-app .'
             }
         }
 
